@@ -22,6 +22,13 @@ mod OwnableComponent {
         owner: ContractAddress,
     }
 
+    #[event]
+    #[derive(Drop, starknet::Event)]
+    enum Event {
+        #[flat]
+        OwnableEvent: OwnableComponent::Event,
+    }
+
     #[embeddable_as(Ownable)]
     impl OwnableImpl<
         TContractState, +HasComponent<TContractState>

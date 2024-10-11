@@ -4,12 +4,17 @@
 // Write a function that calculates the price of an order of apples given
 // the quantity bought. No hints this time!
 
-// I AM NOT DONE
+const NORMAL_PRICE:u32 = 3;
+const LOW_PRICE:u32 = 2;
 
 // Put your function here!
-// fn calculate_price_of_apples{
-
-// }
+fn calculate_price_of_apples(apples:u32) -> u32 {
+    if apples > 40 {
+        apples * LOW_PRICE
+    } else {
+        apples * NORMAL_PRICE
+    }
+}
 
 // Do not change the tests!
 #[test]
